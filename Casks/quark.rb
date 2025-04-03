@@ -5,8 +5,8 @@ cask "quark" do
 
   url "https://pdds-c1-cdn.quark.cn/82-4/stfile/2503/369bfacd2c611caf7cf75101ca2dbf08/QuarkCloudDrive_v3.19.0_release_%28Build2135309-20250327222437%29.dmg?auth_key=1744281869-0-0-c155b8524a8ca8b8cf93d421c9bd8ea0&SESSID=3c071b1ed84f2897ea3931fb9aee7efe"
   name "quark"
-  desc "Powerful productivity suite"
-  homepage "https://app1.com/"
+  desc "夸克网盘"
+  homepage "https://quark.cn/"
 
   app "夸克网盘.app"
 end
