@@ -1,0 +1,18 @@
+### Cask 文件示例（针对 `.pkg` 安装包）
+
+```ruby
+cask "freefilesync" do
+  version "14.3.0"
+  sha256 "09675c7886d5347d65f6ebdbe135fffb9851fd6c140781360cf3dc841ad20254"  # 注意：这里的 sha256 是示例值，实际使用时需要替换为正确的校验码
+
+  url "https://freefilesync.org/get_file.static.php?hash=81eb5441d8c03c45b1a57ddc057d23de"  # 指向 .pkg 文件的下载地址
+  name "MyApp"  # 应用显示名称
+  desc "freefilesync"  # 应用描述
+  homepage "https://freefilesync.org/"  # 应用主页
+
+  pkg "MyAppInstaller.pkg"  # 指定 .pkg 文件的名称（如果下载的文件名与这里的名称一致，则可以直接使用）
+
+  # 卸载脚本（可选，但推荐添加以便用户能够方便地卸载应用）
+  uninstall pkgutil: "com.example.myapp",  # 这里需要替换为实际的包标识符（可以在 .pkg 文件的 Info.plist 中找到）
+            delete:  "/Applications/MyApp.app"  # 如果应用安装在 /Applications 目录下，且卸载时需要删除该应用，可以添加这一行
+end
