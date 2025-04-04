@@ -7,9 +7,6 @@ cask "filezilla" do
     desc "Cross-platform FTP client with GUI"
     homepage "https://filezilla-project.org/"
   
-    container type: :tar,   # 显式声明容器类型
-              nested: :bzip2 # 指定嵌套压缩算法
-
     app "FileZilla.app"
   
     zap trash: [
