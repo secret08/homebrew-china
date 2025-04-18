@@ -8,14 +8,14 @@ cask "i4tools" do
     desc "爱思助手"
     homepage "https://www.i4.cn/"
     installer manual: "i4tools.pkg"
-    uninstall pkgutil: "com.i4.aisizhushou.*", # 使用 pkgutil 查找并替换为实际标识符
-            delete:  "/Applications/爱思助手.app"
+    uninstall pkgutil: "com.i4tools.*", # 使用 pkgutil 查找并替换为实际标识符
+            delete:  "/Applications/i4tools.app"
 
     # zap 清理脚本（可选，根据需要添加，用于删除相关文件和配置）
     zap trash: [
-    "~/Library/Preferences/com.i4.aisizhushou.plist",
-    "~/Library/Caches/com.i4.aisizhushou",
-    # 添加其他需要清理的文件或文件夹
+        "~/Library/Preferences/com.i4tools.plist",
+        "~/Library/Caches/com.i4tools",
+        # 添加其他需要清理的文件或文件夹
   ]
   end
   
